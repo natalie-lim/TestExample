@@ -28,15 +28,18 @@ public class Begin {
         }
         br.close();
     }
+    public String returnString () {
+        return str;
+    }
     
     public static void main (String [] args) throws IOException {
         System.out.println ("my name is");
-        String random = "there was was a girl in Timbuktoo\nwho really liked to go to the loo.";
+        String random = "there once was a girl named";
         Begin bebe = new Begin(random, "output.txt");
         bebe.StringToFile();
         String output = "";
-        bebe = new Begin (output, "output.txt");
-        bebe.FileToString();
-        System.out.println (output);
+        Begin bob = new Begin (output, "output.txt");
+        bob.FileToString();
+        System.out.println (bob.returnString());
     }
 }
