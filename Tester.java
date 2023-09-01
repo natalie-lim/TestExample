@@ -4,14 +4,14 @@ public class Tester {
     public static void main(String[] args) throws IOException {
         System.out.println("my name is");
         String random = "there once was a girl named";
-        Begin bebe = new Begin(random, "output.txt");
+        StringWriter bebe = new StringWriter(random, "output.txt");
         bebe.StringToFile();
         String output = "";
-        Begin bob = new Begin(output, "output.txt");
+        StringWriter bob = new StringWriter(output, "output.txt");
         bob.FileToString();
         System.out.println(bob.returnString());
 
         // testing countCharacters() function
-        System.out.println(Begin.countCharacters("output.txt"));
+        System.out.println(StringWriter.countCharacters("output.txt"));
     }
 }
